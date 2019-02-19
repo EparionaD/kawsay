@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/kawsay.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>{% block title %}{% endblock title %} | Kawsay</title>
+</head>
+<body>
+    <!-- Menú de navegación-->
+    <nav class="navbar navbar-expand-md navbar-dark fondo-2 sticky-top">
+        <a href="{% url 'home' %}" class="navbar-brand d-sm-none">
+            <img src="{% static 'core/img/brand.png' %}" width="100" height="100" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menukawsay" aria-controls="menukawsay" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menukawsay">
+            <div class="navbar-nav letra-m pl-md-3 mr-auto">
+                <a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Inicio</a>
+                <a href="{% url 'products' %}" class="nav-item nav-link {% if request.path == '/productos/' %}active{% endif %}">Productos</a>
+                <a href="{% url 'about' %}" class="nav-item nav-link {% if request.path == '/nosotros/' %}active{% endif %}">Nosotros</a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == '/contacto/' %}active{% endif %}">Contacto</a>
+            </div>
+            <div class="d-flex justify-content-end d-sm-flex justify-content-sm-end">
+                <a class="text-white mx-1" href=""><i class="fab fa-facebook fa-2x redes"></i></a>
+                <a class="text-white mx-1"href=""><i class="fab fa-twitter fa-2x redes"></i></a>
+                <a class="text-white mx-1" href=""><i class="fab fa-instagram fa-2x redes"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Contenido -->
+    {% block content %}{% endblock content %}
+    <!-- Pie de Página -->
+    <footer class="container-fluid fondo-4 py-3">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-md-flex justify-content-md-around text-center">
+                <span class="letra-t">&copy 2019. Todos los derechos reservados.</span>
+                <div class="letra-t"><span>Desarrollado por : </span><a class="text-white" href="http://www.arcoiris.pe" target="_blank">Arco Iris Comunicación Integral</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

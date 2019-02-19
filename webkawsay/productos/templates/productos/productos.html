@@ -1,0 +1,287 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Productos{% endblock title %}
+
+    <!-- Contenido Productos-->
+{% block content %}
+    <!-- Tradicionales -->
+    {% for traditional in traditionals %}
+        <section class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex d-md-flex my-2 my-md-4">
+                    <img class="logo-productos mr-2 mr-md-4" src="{% static 'core/img/tradicionales.svg' %}" width=100 height=100 alt="">
+                    <h2 class="align-self-center color-1">Tradicionales</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 px-2 mb-3">
+                            <div class="card">
+                                <img class="img-fluid card-img-top" src="{{ traditional.image.url }}" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ traditional.name }}</h5>
+                                    <p class="card-text">{{ traditional.description | safe }}</p>
+                                </div>
+                                <hr class="my-0 py-0">
+                                <div class="d-none px-3 pb-3 pt-3 align-items-center justify-content-between fondo-4"><!-- Colocar d-flex y quitar d-none -->
+                                    <h6 class="align-self-center my-auto">Precio</h6>
+                                    <a href="http://www.google.com" target="_blank" class="card-link text-white font-weight-bolder comprar">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link color-1" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link color-1" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link color-1" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link color-1" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link color-1" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-4">
+                            <h3>Beneficiados</h3>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div>
+                                <h4>Ayacucho</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                            </div>
+                            <div>
+                                <h4>Huancavelica</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                            </div>
+                            <div>
+                                <h4>Tarma</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    <!-- Frutados -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex d-md-flex my-2 my-md-4">
+                <img class="logo-productos mr-2 mr-md-4" src="{% static 'core/img/frutales.svg' %}" width=100 height=100 alt="">
+                <h2 class="align-self-center color-5">Frutados</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 px-2 mb-3">
+                        <div class="card">
+                            <img class="img-fluid card-img-top" src="img/fondo.jpeg" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Prueba</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione.</p>
+                            </div>
+                            <hr class="my-0 py-0">
+                            <div class="d-none px-3 pb-3 pt-3 align-items-center justify-content-between fondo-4">
+                                <h6 class="align-self-center my-auto">Precio</h6>
+                                <a href="http://www.google.com" target="_blank" class="card-link text-white font-weight-bolder comprar">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link color-5" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link color-5" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link color-5" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link color-5" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link color-5" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-4">
+                        <h3>Beneficiados</h3>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div>
+                            <h4>Ayacucho</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                        </div>
+                        <div>
+                            <h4>Huancavelica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                        </div>
+                        <div>
+                            <h4>Tarma</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Medicinales -->
+    {% for medicinal in medicinals %}
+        <section class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex d-md-flex my-2 my-md-4">
+                    <img class="logo-productos mr-2 mr-md-4" src="{% static 'core/img/medicinales.svg' %}" width=100 height=100 alt="">
+                    <h2 class="align-self-center color-6">Medicinales</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 px-2 mb-3">
+                            <div class="card">
+                                <img class="img-fluid card-img-top" src="{{ medicinal.image.url }}" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ medicinal.name }}</h5>
+                                    <p class="card-text">{{ medicinal.description | safe }}</p>
+                                </div>
+                                <hr class="my-0 py-0">
+                                <div class="d-none px-3 pb-3 pt-3 align-items-center justify-content-between fondo-4">
+                                    <h6 class="align-self-center my-auto">Precio</h6>
+                                    <a href="http://www.google.com" target="_blank" class="card-link text-white font-weight-bolder comprar">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link color-6" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link color-6" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link color-6" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link color-6" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link color-6" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-4">
+                            <h3>Beneficiados</h3>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div>
+                                <h4>Ayacucho</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                            </div>
+                            <div>
+                                <h4>Huancavelica</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                            </div>
+                            <div>
+                                <h4>Tarma</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    <!-- Combinaciones -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex d-md-flex my-2 my-md-4">
+                <img class="logo-productos mr-2 mr-md-4" src="{% static 'core/img/combinaciones.svg' %}" width=100 height=100 alt="">
+                <h2 class="align-self-center color-4">Combinaciones</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 px-2 mb-3">
+                        <div class="card">
+                            <img class="img-fluid card-img-top" src="img/fondo.jpeg" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Prueba</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione.</p>
+                            </div>
+                            <hr class="my-0 py-0">
+                            <div class="d-none px-3 pb-3 pt-3 align-items-center justify-content-between fondo-4">
+                                <h6 class="align-self-center my-auto">Precio</h6>
+                                <a href="http://www.google.com" target="_blank" class="card-link text-white font-weight-bolder comprar">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link color-4" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link color-4" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link color-4" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link color-4" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link color-4" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-4">
+                        <h3>Beneficiados</h3>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div>
+                            <h4>Ayacucho</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                        </div>
+                        <div>
+                            <h4>Huancavelica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                        </div>
+                        <div>
+                            <h4>Tarma</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias aspernatur corporis delectus aliquam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

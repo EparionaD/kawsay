@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block title %}Contacto{% endblock title %}
+    
+<!-- Contenido Contacto-->
+{% block content %}
+    <section class="container mt-3">
+        <div class="row mb-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column align-items-center">
+                <h1>Encuéntranos</h1>
+                <img src="{% static 'core/img/marca.png' %}" width="200px" height="200px" alt="">
+                <div class=" flex-row list-group">
+                    <a class="px-1 color-3 redes" href=""><i class="fab fa-facebook fa-2x"></i></a>
+                    <a class="px-1 color-3 redes" href=""><i class="fab fa-twitter fa-2x"></i></a>
+                    <a class="px-1 color-3 redes" href=""><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+                <p class="mt-3 letra-c">Jr.Libertad N° 355 - El Tambo - Huancayo</p>
+                <div class="embed-responsive embed-responsive-16by9 w-75">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1379.4557130690341!2d-75.21602648931588!3d-12.064840485123993!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1547851692926" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column align-items-center justify-content-center mt-3 mt-sm-0">
+                <h1>Escríbenos</h1>
+                {% if 'ok' in request.GET %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Su mensaje se ha enviado correctamente.</strong> Pronto nos comunicaremos con usted.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+                <form class="w-75" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <!--<input class="form-control my-2" type="text" placeholder="Ingresa tu nombre">-->
+                        {{ form.name }}
+                        {{ form.name.errors }}
+                        <!--<input type="email" class="form-control my-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email">-->
+                        {{ form.email }}
+                        {{ form.email.errors }}
+                        <!--<textarea class="form-control my-2" id="exampleFormControlTextarea1" placeholder="Ingresa tu mensaje" rows="3"></textarea>-->
+                        {{ form.content }}
+                        {{ form.content.errors }}
+                    </div>
+                    <button type="submit" class="btn btn-primary" value="Enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,147 @@
+.fondo-1{
+    background: #184228;
+}
+.fondo-2{
+    background: #461519;
+}
+.fondo-3{
+    background: #4A5E31;
+}
+.fondo-4{
+    background: #A7CF40;
+}
+.color-1{
+    color: #184228;
+}
+.color-2{
+    color: #461519;
+}
+.color-3{
+    color: #4A5E31;
+}
+.color-4{
+    color: #A7CF40;
+}
+.color-5{
+    color: #F58634;
+}
+.color-6{
+    color: #EC268F;
+}
+.comprar:hover{
+    color: #184228 !important;
+}
+.redes:hover{
+    color: #A7CF40;
+}
+
+@media (max-width: 575.98px){
+    .letra-t{
+        font-size: 0.8rem;
+    }
+    .letra-c{
+        font-size: 0.9rem;
+    }
+    .logo-productos{
+        width: 80px;
+        height:80px;
+    }
+    .w-75{
+        width: 100% !important;
+    }
+}
+.productos{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+}
+@media (min-width:576px) and (max-width:767.98px){
+    .letra-t{
+        font-size: 0.9rem;
+    }
+    .letra-c{
+        font-size: 0.9rem;
+    }
+    .letra-i{
+        font-size: 1.2rem;
+    }
+    .letra-m{
+        font-size: 1.1rem;
+    }
+    .logo-i{
+        width:60vh !important;
+        height: 60vh !important;
+    }
+    .slider{
+        background: url('../img/fondo.jpeg');
+        height: 65vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .card-columns{
+        column-count: 2 !important;
+    }
+}
+@media (min-width:768px) and (max-width: 991.98px){
+    .letra-i{
+        font-size: 1.4rem;
+    }
+    .letra-m{
+        font-size: 1.2rem;
+    }
+    .letra-c{
+        font-size: 1rem;
+    }
+    .logo-i{
+        width:70vh !important;
+        height: 70vh !important;
+    }
+    .slider{
+        background: url('../img/fondo.jpeg');
+        height: 75vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .card-columns{
+        column-count: 2 !important;
+    }
+}
+@media (min-width:992px) and (max-width: 1199.98px){
+    .letra-i{
+        font-size: 1.4rem;
+    }
+    .letra-m{
+        font-size: 1.4rem;
+    }
+    .letra-c{
+        font-size: 1.1rem;
+    }
+    .logo-i{
+        width:80vh !important;
+        height: 80vh !important;
+    }
+    .slider{
+        background: url('../img/fondo.jpeg');
+        height: 85vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (min-width:1200px){
+    .letra-i{
+        font-size: 1.5rem;
+    }
+    .letra-m{
+        font-size: 1.5rem;
+    }
+    .logo-i{
+        width:85vh !important;
+        height: 85vh !important;
+    }
+    .slider{
+        background: url('../img/fondo.jpeg');
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+    }
+}

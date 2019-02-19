@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block title %}Inicio{% endblock title %}
+    
+
+<!-- Contenido Inicio-->
+{% block content %}
+    <section class="slider d-none d-sm-block">
+        <img class="d-none d-sm-block logo-i pt-sm-4 pl-sm-4" src="{% static 'core/img/brand.png' %}" width="200" height="200" alt="">
+    </section>
+    <div class="container-fluid px-0 d-sm-none">
+        <img class="img-fluid" src="{% static 'core/img/fondo.jpeg' %}" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 fondo text-justify mt-sm-4">
+                <p class="p-3 pt-2 letra-i">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nobis sunt dignissimos ex, pariatur unde voluptatibus, accusantium consectetur facere magnam sapiente odio voluptate ad recusandae. Obcaecati corrupti voluptas animi dicta, ad at adipisci delectus aut quod ducimus eaque unde facilis, dignissimos tempore rem iste? Obcaecati eveniet cumque corporis molestiae harum illo eius minima optio, quis rerum quas provident repellat quibusdam temporibus in deserunt nihil nam. Non, dolor et reprehenderit accusamus soluta quia voluptatum tempora? Voluptas aspernatur neque explicabo? Maxime, quaerat! At suscipit cum reprehenderit, vero, qui corporis, aliquam molestiae illo repellendus sunt delectus veniam itaque assumenda laudantium blanditiis tempora iusto.</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    

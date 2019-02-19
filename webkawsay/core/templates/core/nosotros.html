@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block title %}Nosotros{% endblock title %}
+    
+<!-- Contenido Inicio-->
+{% block content %}
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4 mt-sm-4">
+                <div class="jumbotron">
+                    <h1>Nosotros</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum debitis sequi suscipit possimus ab aut, sit excepturi quisquam? Sunt, accusamus!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-md-5 mb-3 mb-sm-3 mb-md-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img class="img-fluid" src="{% static 'core/img/fondo.jpeg' %}" alt="">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img class="img-fluid" src="{% static 'core/img/fondo.jpeg' %}" alt="">
+            </div>
+        </div>
+    </section>
+{% endblock content %}
