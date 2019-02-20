@@ -138,8 +138,4 @@ EMAIL_HOST_USER = 'admin@@kawsayinfusiones.com'
 EMAIL_HOST_PASSWORD = 'ocldK5^$MD7i'
 EMAIL_PORT = '465'
 
-"""EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'Lotus123'
-EMAIL_HOST_PASSWORD = 'ernesto123'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True"""
+
